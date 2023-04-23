@@ -13,3 +13,4 @@ fetch('archive/characters.csv')
       tableBody.appendChild(tr);
     });
   });
+  
