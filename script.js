@@ -1,4 +1,4 @@
-fetch('data.csv')
+fetch('archive/characters.csv')
   .then(response => response.text())
   .then(data => {
     const tableBody = document.querySelector('#myTable tbody');
