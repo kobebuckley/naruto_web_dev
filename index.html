@@ -4,11 +4,23 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Demon Slayer Character Database</title>
-	<link rel="stylesheet" href="styles.css">
+	<script type="module">
+		import nodeCsvParse from 'https://cdn.jsdelivr.net/npm/node-csv-parse@1.2.0/+esm'
+		</script>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<header>
 		<h1>Demon Slayer Character Database</h1>
+<!--
+			Testing Ground
+-->
+		<div id="output"></div>
+
+<!--
+			Testing Ground
+-->
+
 		<nav>
 			<ul>
 				<li><a href="#about">About</a></li>
@@ -37,26 +49,6 @@
 				</thead>
 				<tbody></tbody>
 			  </table>
-
-			<!-- <ul>
-				<li>Tanjiro Kamado</li>
-				<li>Zenitsu Agatsuma</li>
-				<li>Inosuke Hashibira</li>
-				<li>Kanao Tsuyuri</li>
-				<li>Genya Shinazugawa</li>
-				<li>Murata</li>
-				<li>Murata</li>
-				<li>Murata</li>
-				<li>Murata</li>
-				<li>Murata</li>
-				<li>Murata</li>
-				<li>Murata</li>
-				<li>Murata</li>
-				<li>Murata</li>
-				<li>Murata</li>
-
-			</ul> -->
-			
 		</section>
 		<section id="placeholder">
 			<h2>placeholder</h2>
@@ -72,6 +64,10 @@
 	<footer>
 		<p>Copyright &copy; 2023 Demon Slayer Character Database.
 	</footer>
-	<script src="script.js"></script>
+	<!-- <script src="./src/script.js"></script> -->
+<!-- 
+	<script src="./src/updated.js"></script> -->
+	<script src="./dist/bundle.js"></script>
+
 </body>
 </html>
