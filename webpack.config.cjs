@@ -1,46 +1,26 @@
-
-// global.Buffer = require('buffer').Buffer;
-const webpack = require("webpack");
-
-// const buffer = Buffer.from('\r');
-
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
-
-  plugins: [
-    new webpack.ProvidePlugin({
-      Buffer: ['buffer', 'Buffer'],})],
-
-  entry: './src/script.js', // Main JS file
+  entry: './src/script.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
-  module: {
-    rules: [
-      {
-        test: /\.csv$/,
-        use: 'csv-loader',
-      },
-    ],
+  node: {
+    __filename: true,
+    __dirname: true,
+    global: true,
+    // process: true
   },
+  externals: {
+    bufferutil: 'bufferutil',
+    'utf-8-validate': 'utf-8-validate',
+    buffer: 'buffer',
+  },
+  plugins: [
+    new webpack.ProvidePlugin({
+      Buffer: ['buffer', 'Buffer'],
+    }),
+  ],
 };
-
-
-
-
-// module.exports.Command;
-
-      // webpack.config.js
-// const webpack = require("webpack");
-
-// module.exports = {
-//   plugins: [
-//     new webpack.ProvidePlugin({
-//       Buffer: ['buffer', 'Buffer'],
-//     }),
-//     // ..
-//   ]
-//   // ..
-// }
