@@ -24,17 +24,21 @@ def my_view(request):
             data.append(row)
     
 
-    index = len(data) # finding how many of data we have
-    print("the index is: " + str(index))
+    # index = len(data) # finding how many of data we have
+    # print("the index is: " + str(index))
 
 
-    test_char_columns = data[0:26] # each number after 0 represents the data for each person
+    # default_data = data[0:26] # each number after 0 represents the data for each person
 
+    default_data = data[0]
+
+    first_char_data = data[1]
+    last_char_data = data[25]
 
     # for element in data:
     #     print(element)
 
     
     
-    context = {'test_char_columns': test_char_columns, 'index': index}
+    context = {'default_data': default_data, 'first_char_data': first_char_data, 'last_char_data': last_char_data}
     return render(request, '../templates/my_template.html', context)

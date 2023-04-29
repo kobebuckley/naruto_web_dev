@@ -4,18 +4,30 @@
     <title>My Page</title>
   </head>
   <body>
-    <h1>Test Char Columns:</h1>
+    <h1>Default Data:</h1>
     <ul>
-      {% for item in test_char_columns %}
+      {% for item in default_data %}
         <li>{{ item }}</li>
       {% endfor %}
     </ul>
 
 
-    <h1>Test Index:</h1>
+    <h1>First Character Data:</h1>
     <ul>
    
-        <li>{{ index }}</li>
+      {% for item in first_char_data %}
+      <li>{{ item }}</li>
+    {% endfor %}
+     
+    </ul>
+
+
+    <h1>Last Character Data:</h1>
+    <ul>
+   
+      {% for item in last_char_data %}
+      <li>{{ item }}</li>
+    {% endfor %}
      
     </ul>
 
