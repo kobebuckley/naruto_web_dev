@@ -3,6 +3,29 @@ from django.http import HttpResponse
 def index(request):
     return HttpResponse("Django has been connected!")
 
+# import socketio
+# sio = socketio.Server(async_mode='threading')
+
+
+# @sio.on('connect')
+# def connect(sid, environ):
+#     print('Connected:', sid)
+
+# @sio.on('disconnect')
+# def disconnect(sid):
+#     print('Disconnected:', sid)
+
+# def my_view(request):
+#     ...
+#     return sio_manage(request, {'': index})
+
+
+
+
+
+
+
+
 
 
 
